@@ -163,12 +163,12 @@ export function ContactModal({ advisor, open, onClose }: ContactModalProps) {
                 <h3 className="text-sm font-medium text-gray-700">
                     {isEnglish
                       ? `Track your conversation with ${advisor.firstName}`
-                      : `Suivez votre échange avec ${advisor.firstName}`}
+                      : `Gardez la main sur vos échanges avec ${advisor.firstName}`}
                 </h3>
                 <p className="mt-1 text-sm text-gray-600">
                   {isEnglish
                     ? "Create a free Jared account to keep track of your advisor requests."
-                    : "Créez un compte Jared gratuit pour retrouver vos conseillers et suivre vos demandes."}
+                    : "Créez un compte gratuit pour suivre vos échanges et retrouver vos conseillers."}
                 </p>
                 <button
                   type="button"

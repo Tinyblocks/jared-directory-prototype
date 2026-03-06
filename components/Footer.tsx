@@ -21,7 +21,7 @@ export function Footer() {
         rights: "All rights reserved.",
       }
     : {
-        blurb: "Le réseau de confiance pour trouver votre conseiller financier.",
+        blurb: "La plateforme de confiance pour trouver le conseiller qui vous correspond.",
         useful: "Liens utiles",
         home: "Accueil",
         find: "Trouver mon conseiller",

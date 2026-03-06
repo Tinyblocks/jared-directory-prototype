@@ -78,7 +78,7 @@ function RechercheAIContent() {
               <p className="mt-2 text-gray-600">
                 {isEnglish
                   ? "In a few words, tell us about your situation. AI handles the rest."
-                  : "En quelques mots, parlez-nous de votre situation. L'IA s'occupe du reste."}
+                  : "Quelques mots suffisent. Notre outil identifie les conseillers adaptés à votre profil."}
               </p>
               <textarea
                 placeholder={
@@ -94,7 +94,7 @@ function RechercheAIContent() {
               <p className="mt-3 text-sm text-gray-500">
                 {isEnglish
                   ? "Describe your situation, goals, and constraints in your own words."
-                  : "Décrivez librement votre situation, vos objectifs et vos contraintes."}
+                  : "Situation, objectifs, contraintes : décrivez librement."}
               </p>
               <button
                 type="button"
@@ -117,7 +117,7 @@ function RechercheAIContent() {
           <p className="mt-2 text-gray-600">
             {isEnglish
               ? "Please confirm this information before viewing profiles."
-              : "Vérifiez que ces informations sont correctes avant de voir les profils."}
+              : "Vérifiez ces informations avant de consulter les profils."}
           </p>
           <div className="mt-8 space-y-6">
             <div className="rounded-lg border border-gray-200 p-4">
@@ -182,7 +182,7 @@ function RechercheAIContent() {
             </span>
           </nav>
           <p className="mb-6 text-gray-600">
-            {isEnglish ? "4 profiles selected for you" : "4 profils sélectionnés pour vous"}
+            {isEnglish ? "4 profiles selected for you" : "4 conseillers sélectionnés pour vous"}
           </p>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {advisors.map((advisor) => (

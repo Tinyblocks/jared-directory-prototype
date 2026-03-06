@@ -84,7 +84,7 @@ export default function FindMyAdvisorPage() {
           <p className="text-lg text-gray-700">
             {isEnglish
               ? "Our AI is analyzing your answers to find the best advisors for you..."
-              : "Notre IA analyse vos réponses pour trouver les meilleurs conseillers pour vous..."}
+              : "Nous analysons vos réponses pour vous proposer les conseillers les plus adaptés..."}
           </p>
         </div>
       </section>

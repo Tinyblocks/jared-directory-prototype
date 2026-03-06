@@ -105,7 +105,7 @@ export function AdvisorCard({
       >
         {isBestMatch && (
           <span className="absolute right-3 top-3 rounded-md bg-[var(--color-primary)] px-2 py-0.5 text-xs font-medium text-white">
-            {isEnglish ? "Best match" : "Meilleure correspondance"}
+            {isEnglish ? "Best match" : "Recommandé pour vous"}
           </span>
         )}
         <div className="flex flex-1 flex-row gap-4 p-4">
@@ -163,7 +163,7 @@ export function AdvisorCard({
           <div className="flex w-full items-start gap-2 border-t border-blue-100 bg-blue-50 px-4 py-3">
             <Sparkles className="mt-0.5 h-3.5 w-3.5 shrink-0 text-blue-600" />
             <p className="text-xs leading-snug text-blue-900">
-              {isEnglish ? "Matched because" : "Sélectionné car"} {matchReason}
+              {isEnglish ? "Matched because" : "Recommandé car"} {matchReason}
             </p>
           </div>
         )}

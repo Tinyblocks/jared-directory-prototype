@@ -48,12 +48,12 @@ export function SearchSection() {
     <section className="border-t border-gray-200 bg-gray-50 py-20 sm:py-28">
       <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-10">
         <h2 className="text-center text-2xl font-semibold text-gray-900">
-          {isEnglish ? "Already know what you're looking for?" : "Vous savez déjà ce que vous cherchez ?"}
+          {isEnglish ? "Already know what you're looking for?" : "Vous cherchez quelque chose de précis ?"}
         </h2>
         <p className="mt-3 text-center text-base text-gray-600">
           {isEnglish
             ? "Search by name, specialty, or describe your situation in your own words."
-            : "Recherchez par nom, spécialité, ou décrivez votre situation avec vos mots."}
+            : "Par nom, spécialité ou en décrivant votre situation. Nous trouvons le bon conseiller."}
         </p>
 
         <div className="mt-10 flex border-b border-gray-200">
@@ -66,7 +66,7 @@ export function SearchSection() {
                 : "border-transparent text-gray-500 hover:text-gray-700"
             }`}
           >
-            {isEnglish ? "Keyword search" : "Recherche par mots-clés"}
+            {isEnglish ? "Keyword search" : "Recherche classique"}
           </button>
           <button
             type="button"
@@ -77,7 +77,7 @@ export function SearchSection() {
                 : "border-transparent text-gray-500 hover:text-gray-700"
             }`}
           >
-            {isEnglish ? "AI search" : "Recherche IA"}
+            {isEnglish ? "AI search" : "Recherche assistée"}
           </button>
         </div>
 
@@ -158,11 +158,11 @@ export function SearchSection() {
               value={aiInput}
               onChange={(e) => setAiInput(e.target.value)}
               rows={4}
-              placeholder={isEnglish ? 'Describe your situation or what you need... e.g. "I need an investment advisor in Lyon, available soon."' : 'Décrivez votre situation ou vos besoins... ex. "J\'ai besoin d\'un conseiller en investissement à Lyon, disponible rapidement."'}
+              placeholder={isEnglish ? 'Describe your situation or what you need... e.g. "I need an investment advisor in Lyon, available soon."' : 'Ex : "Je cherche un conseiller en investissement à Lyon pour préparer ma retraite"'}
               className="w-full rounded-lg border border-gray-300 px-5 py-4 text-base focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]"
             />
             <p className="mt-4 text-sm text-gray-500">
-              {isEnglish ? "Describe your situation, goals, and constraints in your own words." : "Décrivez votre situation, vos objectifs et vos contraintes avec vos mots."}
+              {isEnglish ? "Describe your situation, goals, and constraints in your own words." : "Quelques mots suffisent. Notre outil identifie les conseillers adaptés à votre profil."}
             </p>
             <div className="mt-5 flex justify-center">
               <Button onClick={handleAiSearch}>{isEnglish ? "Search" : "Rechercher"}</Button>

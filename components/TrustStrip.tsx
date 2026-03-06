@@ -17,11 +17,11 @@ export function TrustStrip() {
     },
     {
       stat: "100%",
-      label: "Mise en contact gratuite",
+      label: "Gratuit",
     },
     {
       stat: "2 min",
-      label: "Pour prendre contact",
+      label: "Pour échanger avec un conseiller",
     },
   ];
 

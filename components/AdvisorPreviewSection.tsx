@@ -19,7 +19,7 @@ export function AdvisorPreviewSection() {
     <section className="bg-gray-50 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-2xl font-bold text-gray-900 sm:text-3xl">
-          {isEnglish ? "Meet some of our advisors" : "Découvrez quelques-uns de nos conseillers"}
+          {isEnglish ? "Meet some of our advisors" : "Découvrez nos conseillers"}
         </h2>
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {previewAdvisors.map((advisor, index) => (
@@ -33,7 +33,7 @@ export function AdvisorPreviewSection() {
         </div>
         <div className="mt-12 flex flex-col items-center gap-4 text-center">
           <p className="text-gray-600">
-            {isEnglish ? "Not sure which advisor is right for you?" : "Vous ne savez pas quel conseiller vous convient ?"}
+            {isEnglish ? "Not sure which advisor is right for you?" : "Vous hésitez encore ? Laissez-vous guider."}
           </p>
           <Link href="/find-my-advisor">
             <Button>{isEnglish ? "Find my advisor" : "Trouver mon conseiller"}</Button>

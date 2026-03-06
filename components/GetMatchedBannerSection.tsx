@@ -9,12 +9,12 @@ export function GetMatchedBannerSection() {
     <section className="bg-gray-50 py-12">
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <h2 className="text-2xl font-bold text-gray-900">
-          {isEnglish ? "Not sure where to start?" : "Vous ne savez pas par où commencer ?"}
+          {isEnglish ? "Not sure where to start?" : "Vous hésitez encore ?"}
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-gray-600">
           {isEnglish
             ? "Tell us about your situation in a few minutes. The Jared team will review your profile and send you a personalized selection of advisors by email."
-            : "Décrivez-nous votre situation en quelques minutes, et on vous répond sous 48 h avec une sélection de conseillers adaptés à vos besoins."}
+            : "Quelques minutes pour décrire votre situation. Notre équipe vous envoie une sélection personnalisée sous 48 h."}
         </p>
         <Link
           href="/trouver-mon-conseiller"

@@ -99,12 +99,12 @@ export function SearchHero() {
         <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">
           {isEnglish
             ? "Find the financial advisor that's right for you"
-            : "Trouvez le conseiller financier qu'il vous faut"}
+            : "Trouvez le conseiller qui vous correspond"}
         </h1>
         <p className="mt-2 text-lg text-gray-600">
           {isEnglish
             ? "Verified professionals, matched to your needs."
-            : "Des professionnels vérifiés par Jared, proches de chez vous."}
+            : "Des professionnels vérifiés, adaptés à votre profil."}
         </p>
 
         <div className="mt-8 flex border-b border-gray-200">
@@ -117,7 +117,7 @@ export function SearchHero() {
                 : "border-transparent text-gray-500 hover:text-gray-700"
             }`}
           >
-            {isEnglish ? "🔍 Keyword search" : "🔍 Recherche par mots-clés"}
+            {isEnglish ? "🔍 Keyword search" : "🔍 Recherche classique"}
           </button>
           <button
             type="button"
@@ -128,7 +128,7 @@ export function SearchHero() {
                 : "border-transparent text-gray-500 hover:text-gray-700"
             }`}
           >
-            {isEnglish ? "✨ AI Search Beta" : "✨ Recherche IA (bêta)"}
+            {isEnglish ? "✨ AI Search Beta" : "✨ Recherche assistée"}
           </button>
         </div>
 
@@ -249,7 +249,7 @@ export function SearchHero() {
           >
             {isEnglish
               ? "Not sure where to start?"
-              : "Vous ne savez pas par où commencer ?"}
+              : "Vous hésitez ? Laissez-vous guider"}
           </Link>
         </p>
       </div>

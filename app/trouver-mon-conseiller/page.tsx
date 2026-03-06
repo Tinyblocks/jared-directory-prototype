@@ -93,7 +93,7 @@ const SITUATION_OPTIONS_EN = [
 
 const MODE_OPTIONS_FR = [
   { id: "visio", label: "En visio", sub: "Depuis chez moi", icon: "🖥️" },
-  { id: "presentiel", label: "En présentiel", sub: "Dans votre cabinet", icon: "🤝" },
+  { id: "presentiel", label: "En présentiel", sub: "En cabinet", icon: "🤝" },
   { id: "les-deux", label: "Les deux me conviennent", sub: "Flexible", icon: "💬" },
 ];
 const MODE_OPTIONS_EN = [
@@ -227,12 +227,12 @@ function TrouverMonConseillerContent() {
             <h2 className="text-2xl font-bold text-gray-900">
               {isEnglish
                 ? "What's your main financial goal?"
-                : "Quel est votre principal besoin ?"}
+                : "Quel est votre objectif principal ?"}
             </h2>
             <p className="mt-2 text-gray-600">
               {isEnglish
                 ? "Choose what best matches your situation."
-                : "Sélectionnez la situation qui vous correspond le mieux."}
+                : "Choisissez ce qui correspond le mieux à votre situation."}
             </p>
             <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {besoinOptions.map((opt) => (
@@ -269,12 +269,12 @@ function TrouverMonConseillerContent() {
               {isEnglish ? "Back" : "Retour"}
             </button>
             <h2 className="text-2xl font-bold text-gray-900">
-              {isEnglish ? "Where are you located?" : "Où vous trouvez-vous ?"}
+              {isEnglish ? "Where are you located?" : "Où êtes-vous situé ?"}
             </h2>
             <p className="mt-2 text-gray-600">
               {isEnglish
                 ? "So we can find advisors near you."
-                : "Pour trouver des conseillers proches de chez vous."}
+                : "Pour vous mettre en relation avec des conseillers près de chez vous."}
             </p>
             <div className="mt-8">
               <label className="block text-sm font-medium text-gray-700">
@@ -332,7 +332,7 @@ function TrouverMonConseillerContent() {
                 <span className="text-sm text-gray-700">
                   {isEnglish
                     ? "No preference — I prefer remote consultation"
-                    : "Peu importe, je préfère une consultation en visio"}
+                    : "Peu importe la ville, je préfère la visio"}
                 </span>
               </label>
               <button
@@ -358,12 +358,12 @@ function TrouverMonConseillerContent() {
               {isEnglish ? "Back" : "Retour"}
             </button>
             <h2 className="text-2xl font-bold text-gray-900">
-              {isEnglish ? "What's your current situation?" : "Quelle est votre situation ?"}
+              {isEnglish ? "What's your current situation?" : "Quelle est votre situation professionnelle ?"}
             </h2>
             <p className="mt-2 text-gray-600">
               {isEnglish
                 ? "This helps us find the advisor who fits best."
-                : "Cela nous aide à trouver le conseiller le plus adapté."}
+                : "Pour vous orienter vers le conseiller le plus adapté à votre profil."}
             </p>
             <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {situationOptions.map((opt) => (
@@ -401,10 +401,10 @@ function TrouverMonConseillerContent() {
             <h2 className="text-2xl font-bold text-gray-900">
               {isEnglish
                 ? "How would you like to be supported?"
-                : "Comment souhaitez-vous être accompagné ?"}
+                : "Comment souhaitez-vous échanger ?"}
             </h2>
             <p className="mt-2 text-gray-600">
-              {isEnglish ? "Remote or in person?" : "En visio ou en présentiel ?"}
+              {isEnglish ? "Remote or in person?" : "Visio ou rendez-vous en cabinet ?"}
             </p>
             <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
               {modeOptions.map((opt) => (
@@ -509,7 +509,7 @@ function TrouverMonConseillerContent() {
             <p className="mt-4 text-center text-sm text-gray-500">
               {isEnglish
                 ? "Free, no commitment. Your data will never be sold."
-                : "Gratuit et sans engagement. Vos données ne seront jamais revendues."}
+                : "Gratuit et sans engagement. Vos données restent confidentielles."}
             </p>
           </div>
         )}
@@ -527,12 +527,12 @@ function TrouverMonConseillerContent() {
             <p className="mt-4 max-w-2xl text-gray-700">
               {isEnglish
                 ? "The Jared team will review your profile and personally select the advisors best suited to your situation. You'll receive a curated shortlist by email within 24 to 48 hours."
-                : "L'équipe Jared va analyser votre profil et sélectionner manuellement les conseillers les plus adaptés à votre situation. Vous recevrez une sélection personnalisée par email dans les 24 à 48 heures."}
+                : "Notre équipe analyse votre profil et sélectionne les conseillers les plus adaptés. Vous recevrez une sélection personnalisée par email sous 24 à 48 h."}
             </p>
             <p className="mt-3 text-sm text-gray-500">
               {isEnglish
                 ? "Check your inbox — our team will reach out to the email address you provided."
-                : "Vérifiez votre boîte mail — notre équipe vous contactera à l'adresse que vous avez fournie."}
+                : "Pensez à vérifier vos spams. Notre équipe vous contactera à l'adresse indiquée."}
             </p>
             <Link
               href="/"

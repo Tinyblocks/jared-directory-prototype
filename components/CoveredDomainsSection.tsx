@@ -29,12 +29,12 @@ export function CoveredDomainsSection() {
         <h2 className="text-center text-2xl font-bold text-gray-900 sm:text-3xl">
           {isEnglish
             ? "Experts for every part of your financial life"
-            : "Des experts pour chaque aspect de vos finances"}
+            : "Un expert pour chaque domaine de votre vie financière"}
         </h2>
         <p className="mx-auto mt-3 max-w-3xl text-center text-gray-600">
           {isEnglish
             ? "Retirement, investments, taxes, or just getting started. Tell us what's on your mind and we'll find the right person."
-            : "Retraite, investissements, fiscalité ou vous débutez. Dites-nous ce qui vous préoccupe et nous trouverons la bonne personne."}
+            : "Retraite, investissements, fiscalité ou premiers pas. Indiquez-nous ce qui vous préoccupe, nous trouvons le bon interlocuteur."}
         </p>
 
         <div className="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-3">

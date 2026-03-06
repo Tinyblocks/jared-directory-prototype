@@ -12,34 +12,34 @@ export function MobileAppPromo() {
             <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
               {isEnglish
                 ? "More than a match."
-                : "Plus qu'une mise en relation."}
+                : "Bien plus qu'une simple mise en relation."}
             </h2>
             <p className="mt-4 text-gray-600">
               {isEnglish
                 ? "Jared helps you understand your situation before the first call, and track where you stand after. No jargon, no pressure. Just a clear picture of your finances."
-                : "L'application Jared analyse votre situation financière, identifie vos priorités (budget, épargne, investissements, retraite) et vous prépare à rencontrer le bon professionnel. Avant le rendez-vous, comprenez vos enjeux. Après, suivez vos progrès."}
+                : "L'app Jared vous aide à y voir clair avant le premier rendez-vous, puis à suivre vos progrès. Sans jargon, sans pression. Une vision claire de vos finances."}
             </p>
             <ul className="mt-6 space-y-3 text-sm text-gray-700">
               <li>
                 <span className="font-semibold">
                   {isEnglish
                     ? "🎯 Know where you stand"
-                    : "🎯 Sachez où vous en êtes"}
+                    : "🎯 Faites le point sur votre situation"}
                 </span>
                 <span className="block text-gray-600">
                   {isEnglish
                     ? "Set your goals before meeting an advisor"
-                    : "Fixez vos objectifs avant de rencontrer un conseiller"}
+                    : "Définissez vos objectifs avant le premier rendez-vous"}
                 </span>
               </li>
               <li>
                 <span className="font-semibold">
-                  {isEnglish ? "📚 Learn before you act" : "📚 Comprenez avant d'agir"}
+                  {isEnglish ? "📚 Learn before you act" : "📚 Informez-vous avant d'agir"}
                 </span>
                 <span className="block text-gray-600">
                   {isEnglish
                     ? "Guides written by certified professionals"
-                    : "Contenus rédigés par des professionnels, clairs et neutres"}
+                    : "Contenus rédigés par des professionnels certifiés"}
                 </span>
               </li>
               <li>
@@ -49,7 +49,7 @@ export function MobileAppPromo() {
                 <span className="block text-gray-600">
                   {isEnglish
                     ? "Follow up with your advisor and track your progress"
-                    : "Suivez vos échanges avec votre conseiller et vos progrès"}
+                    : "Suivez vos échanges et mesurez vos progrès"}
                 </span>
               </li>
             </ul>

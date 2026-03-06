@@ -6,17 +6,17 @@ const STEPS_FR = [
   {
     title: "Recherchez",
     description:
-      "Cherchez par spécialité, localisation ou décrivez votre situation en langage naturel",
+      "Par spécialité, ville ou en décrivant votre situation. Notre outil fait le reste.",
   },
   {
     title: "Consultez les profils",
     description:
-      "Chaque conseiller est vérifié par Jared. Lisez leur expertise, leurs spécialités et les avis clients.",
+      "Chaque conseiller est vérifié par Jared. Expertise, spécialités et avis clients à portée de clic.",
   },
   {
     title: "Prenez contact",
     description:
-      "Envoyez une demande en 2 minutes. Gratuit, sans engagement.",
+      "Une demande en 2 minutes. Gratuit et sans engagement.",
   },
 ];
 const STEPS_EN = [
@@ -46,7 +46,7 @@ export function HowItWorksSection() {
         <h2 className="text-center text-2xl font-bold text-gray-900 sm:text-3xl">
           {isEnglish
             ? "Find your advisor in 3 steps"
-            : "Trouvez votre conseiller en 3 étapes"}
+            : "Votre conseiller en 3 étapes"}
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {steps.map((step, index) => (

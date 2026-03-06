@@ -13,10 +13,10 @@ const MATCH_REASONS_EN = [
 ];
 
 const MATCH_REASONS_FR = [
-  "vous préparez votre retraite et souhaitez protéger votre épargne sur le long terme.",
-  "vous avez mentionné un changement financier récent et avez besoin de quelqu'un spécialisé en restructuration patrimoniale.",
-  "vous voulez faire fructifier votre argent et préférez un conseiller indépendant sans affiliation bancaire.",
-  "vous débutez et avez besoin d'accompagnement pour construire votre première stratégie d'investissement.",
+  "vous préparez votre retraite et souhaitez sécuriser votre épargne.",
+  "votre situation a évolué récemment, vous cherchez un spécialiste en restructuration patrimoniale.",
+  "vous souhaitez faire fructifier votre épargne avec un conseiller indépendant.",
+  "vous débutez et souhaitez être accompagné pour vos premiers investissements.",
 ];
 
 export default function YourAdvisorsPage() {
@@ -28,12 +28,12 @@ export default function YourAdvisorsPage() {
     <section className="bg-gray-50 py-20">
       <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-10">
         <h1 className="text-4xl font-semibold text-gray-900">
-          {isEnglish ? "Your advisor matches" : "Vos conseillers correspondants"}
+          {isEnglish ? "Your advisor matches" : "Vos recommandations"}
         </h1>
         <p className="mt-3 text-lg text-gray-600">
           {isEnglish
             ? "Here is your curated shortlist based on your answers."
-            : "Voici votre sélection personnalisée selon vos réponses."}
+            : "Voici les conseillers que nous avons sélectionnés pour vous."}
         </p>
         <div className="mt-4">
           <Link href="/find-my-advisor" className="text-sm text-blue-600 hover:underline">

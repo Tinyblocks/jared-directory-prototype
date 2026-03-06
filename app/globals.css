@@ -1,26 +1,139 @@
 @import "tailwindcss";
 
+/* Jared Design System - aligned with Figma UI Jared */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Brand (from Figma node fills) */
+  --color-primary: #2556BF;
+  --color-primary-hover: #1d45a0;
+  --color-primary-muted: #eff6ff;
+  --color-success: #15803d;
+  --color-footer-bg: #111827;
+  /* Primary button gradient (Figma default: Color=Gradient) */
+  --btn-gradient-from: #091966;
+  --btn-gradient-via: #1D298E;
+  --btn-gradient-to: #2B2490;
+  --btn-gradient-highlight: #2B7FFF;
+  /* Spacing & radius (Figma: cornerRadius 16 for buttons) */
+  --spacing-card: 12px;
+  --radius-card: 8px;
+  --radius-button: 16px;
+  --radius-input: 12px;
+  /* Shadow (Figma: offset 0 2, radius 8, rgba 0.2) */
+  --shadow-button: 0 2px 8px rgba(99, 99, 99, 0.2);
+  --font-satoshi: "Satoshi", system-ui, sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-satoshi);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Primary CTA gradient button - Figma default style */
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    var(--btn-gradient-highlight) 0%,
+    var(--btn-gradient-via) 35%,
+    var(--btn-gradient-from) 100%
+  );
+  box-shadow: var(--shadow-button);
+  border-radius: var(--radius-button);
+  padding: 16px 24px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: white;
+  transition: filter 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover:not(:disabled) {
+  filter: brightness(1.08);
+  box-shadow: 0 4px 12px rgba(99, 99, 99, 0.25);
+}
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Explicit results-page card/grid overrides */
+.directory-results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.directory-results-grid-item {
+  grid-column: span 1 / span 1;
+}
+
+.advisor-result-card {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: white;
+}
+
+.advisor-result-main {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
+}
+
+.advisor-result-photo {
+  width: 128px;
+  height: 128px;
+  min-width: 128px;
+  min-height: 128px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.advisor-result-photo-image {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.advisor-result-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 4px;
+}
+
+.advisor-result-cta {
+  width: fit-content !important;
+  margin-top: 0;
+  margin-left: 12px;
+  align-self: flex-end;
+  display: inline-flex !important;
+  padding: 10px 18px !important;
+  min-height: 0 !important;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .directory-results-grid {
+    grid-template-columns: 1fr;
+  }
 }

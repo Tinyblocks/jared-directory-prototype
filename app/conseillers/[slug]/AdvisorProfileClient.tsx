@@ -56,12 +56,20 @@ export function AdvisorProfileClient({
               {advisor.firstName} {advisor.lastName}
             </span>
           </div>
+          <Link
+            href={`/conseillers/${advisor.slug}/book`}
+            className="btn-primary mt-4 flex w-full items-center justify-center py-2.5 text-sm"
+          >
+            {isEnglish ? "Request a meeting" : "Réserver un rendez-vous"}
+          </Link>
           <button
             type="button"
             onClick={() => setContactOpen(true)}
-            className="btn-primary mt-4 w-full py-2.5 text-sm"
+            className="mt-2 block w-full text-center text-sm text-gray-500 hover:text-gray-700"
           >
-            {isEnglish ? "Contact" : "Contacter"} {advisor.firstName}
+            {isEnglish
+              ? "Prefer to send a message instead?"
+              : "Préférer envoyer un message ?"}
           </button>
           <Link
             href="/conseillers"
@@ -86,12 +94,20 @@ export function AdvisorProfileClient({
       <>
         {mobileBarVisible && (
           <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-gray-200 bg-white p-4 shadow-lg lg:hidden">
+            <Link
+              href={`/conseillers/${advisor.slug}/book`}
+              className="btn-primary flex w-full items-center justify-center py-4"
+            >
+              {isEnglish ? "Request a meeting" : "Réserver un rendez-vous"}
+            </Link>
             <button
               type="button"
               onClick={() => setContactOpen(true)}
-              className="btn-primary w-full py-4"
+              className="mt-2 block w-full text-center text-sm text-gray-500 hover:text-gray-700"
             >
-              {isEnglish ? "Contact" : "Contacter"} {advisor.firstName}
+              {isEnglish
+                ? "Prefer to send a message instead?"
+                : "Préférer envoyer un message ?"}
             </button>
           </div>
         )}
@@ -106,14 +122,24 @@ export function AdvisorProfileClient({
 
   return (
     <>
-      <button
-        id={trigger === "hero" ? "hero-cta" : undefined}
-        type="button"
-        onClick={() => setContactOpen(true)}
-        className={className}
-      >
-        {isEnglish ? "Contact" : "Contacter"} {advisor.firstName}
-      </button>
+      <div className="flex flex-col items-start gap-2">
+        <Link
+          id={trigger === "hero" ? "hero-cta" : undefined}
+          href={`/conseillers/${advisor.slug}/book`}
+          className={className}
+        >
+          {isEnglish ? "Request a meeting" : "Réserver un rendez-vous"}
+        </Link>
+        <button
+          type="button"
+          onClick={() => setContactOpen(true)}
+          className="text-sm text-gray-500 hover:text-gray-700"
+        >
+          {isEnglish
+            ? "Prefer to send a message instead?"
+            : "Préférer envoyer un message ?"}
+        </button>
+      </div>
       <ContactModal
         advisor={advisor}
         open={contactOpen}

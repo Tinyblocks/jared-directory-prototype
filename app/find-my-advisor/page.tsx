@@ -171,10 +171,10 @@ export default function FindMyAdvisorPage() {
                 </Button>
               </div>
             </>
-          ) : (
+          ) : !question ? null : (
             <>
           <h1 className="mt-8 text-3xl font-semibold text-gray-900">
-            {question!.title}
+            {question.title}
           </h1>
 
           <div className="mt-8 space-y-3">

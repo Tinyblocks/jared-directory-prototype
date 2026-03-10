@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jared — Directory & Advisor Matching
+
+A Next.js app for finding financial advisors. Bilingual (FR/EN).
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Updating the Live Site
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Option 1: Push to GitHub (recommended)
+
+If the repo is connected to Vercel or Netlify, pushing to `main` triggers an automatic deploy.
+
+```bash
+git add .
+git commit -m "Your change description"
+git push origin main
+```
+
+**Live URLs:**
+- **Vercel:** https://jared-directory-prototype.vercel.app
+- **Netlify:** https://jared-directory-prototype.netlify.app
+
+### Option 2: Deploy via CLI
+
+**Vercel (recommended for Next.js):**
+```bash
+vercel --prod
+```
+
+**Netlify:**
+```bash
+netlify deploy --prod
+```
+
+### Connect GitHub for auto-deploy
+
+- **Vercel:** [Project Settings → Git](https://vercel.com/nylk1s-projects/jared-directory-prototype/settings/git) → Connect repository
+- **Netlify:** [Site Settings → Build & deploy](https://app.netlify.com/sites/jared-directory-prototype/settings/deploys) → Link repository
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Deploying Next.js](https://nextjs.org/docs/app/building-your-application/deploying)

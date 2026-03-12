@@ -5,51 +5,55 @@ import { useLanguage } from "./useLanguage";
 export function MobileAppPromo() {
   const { isEnglish } = useLanguage();
   return (
-    <section className="bg-white py-20 sm:py-28">
+    <section className="border-t border-gray-200 bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-stretch">
           <div className="flex flex-col justify-center">
             <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
               {isEnglish
-                ? "More than a match."
-                : "Bien plus qu'une simple mise en relation."}
+                ? "More than just a matching platform"
+                : "Bien plus qu'une simple plateforme de mise en relation"}
             </h2>
             <p className="mt-4 text-gray-600">
               {isEnglish
-                ? "Jared helps you understand your situation before the first call, and track where you stand after. No jargon, no pressure. Just a clear picture of your finances."
-                : "L'app Jared vous aide à y voir clair avant le premier rendez-vous, puis à suivre vos progrès. Sans jargon, sans pression. Une vision claire de vos finances."}
+                ? "The Jared app supports you before, during, and after your first meeting with your advisor."
+                : "L'application Jared vous accompagne avant, pendant et après votre premier rendez-vous avec votre conseiller."}
             </p>
-            <ul className="mt-6 space-y-3 text-sm text-gray-700">
+            <ul className="mt-6 space-y-4 text-sm text-gray-700">
               <li>
                 <span className="font-semibold">
                   {isEnglish
-                    ? "🎯 Know where you stand"
-                    : "🎯 Faites le point sur votre situation"}
+                    ? "→ Clarify your financial goals"
+                    : "→ Clarifiez vos objectifs financiers"}
                 </span>
                 <span className="block text-gray-600">
                   {isEnglish
-                    ? "Set your goals before meeting an advisor"
-                    : "Définissez vos objectifs avant le premier rendez-vous"}
+                    ? "Before your first meeting, get clear on your situation and priorities: investment, retirement, tax optimization, or personal projects."
+                    : "Avant votre premier rendez-vous, identifiez clairement votre situation et vos priorités : investissement, retraite, optimisation fiscale ou projets personnels."}
                 </span>
               </li>
               <li>
                 <span className="font-semibold">
-                  {isEnglish ? "📚 Learn before you act" : "📚 Informez-vous avant d'agir"}
+                  {isEnglish
+                    ? "→ Make informed decisions"
+                    : "→ Prenez des décisions éclairées"}
                 </span>
                 <span className="block text-gray-600">
                   {isEnglish
-                    ? "Guides written by certified professionals"
-                    : "Contenus rédigés par des professionnels certifiés"}
+                    ? "Access content written by certified experts to better understand the financial landscape."
+                    : "Accédez à des contenus rédigés par des experts certifiés pour mieux comprendre les enjeux financiers."}
                 </span>
               </li>
               <li>
                 <span className="font-semibold">
-                  {isEnglish ? "🤝 Stay on track" : "🤝 Restez sur la bonne voie"}
+                  {isEnglish
+                    ? "→ Track your progress"
+                    : "→ Suivez votre progression"}
                 </span>
                 <span className="block text-gray-600">
                   {isEnglish
-                    ? "Follow up with your advisor and track your progress"
-                    : "Suivez vos échanges et mesurez vos progrès"}
+                    ? "Keep a clear picture of your financial strategy and measure your progress over time."
+                    : "Gardez une vision claire de votre stratégie financière et mesurez vos avancées dans le temps."}
                 </span>
               </li>
             </ul>

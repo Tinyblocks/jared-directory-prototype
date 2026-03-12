@@ -7,7 +7,7 @@ import { Button } from "./Button";
 import { useLanguage } from "./useLanguage";
 
 const CITIES = ["Paris", "Lyon", "Marseille", "Bordeaux", "Toulouse"];
-const SPECIALTY_SUGGESTIONS = [
+const SPECIALTY_SUGGESTIONS_FR = [
   "Investissement",
   "Épargne",
   "Retraite",
@@ -15,6 +15,14 @@ const SPECIALTY_SUGGESTIONS = [
   "Budget",
   "Patrimoine",
   "Gestion de patrimoine",
+];
+const SPECIALTY_SUGGESTIONS_EN = [
+  "Investment",
+  "Savings",
+  "Retirement",
+  "Tax",
+  "Budget",
+  "Wealth management",
 ];
 
 type TabType = "keyword" | "ai";
@@ -48,12 +56,12 @@ export function SearchSection() {
     <section className="border-t border-gray-200 bg-gray-50 py-20 sm:py-28">
       <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-10">
         <h2 className="text-center text-2xl font-semibold text-gray-900">
-          {isEnglish ? "Already know what you're looking for?" : "Vous cherchez quelque chose de précis ?"}
+          {isEnglish ? "Have a specific financial need?" : "Vous avez un besoin financier en particulier ?"}
         </h2>
         <p className="mt-3 text-center text-base text-gray-600">
           {isEnglish
-            ? "Search by name, specialty, or describe your situation in your own words."
-            : "Par nom, spécialité ou en décrivant votre situation. Nous trouvons le bon conseiller."}
+            ? "Search for a financial expert by specialty, concern, or location. Jared helps you identify the most relevant advisors based on your financial goals."
+            : "Recherchez un expert financier par spécialité, problématique ou localisation. Jared vous aide à identifier les conseillers les plus pertinents selon vos objectifs financiers."}
         </p>
 
         <div className="mt-10 flex border-b border-gray-200">
@@ -66,7 +74,7 @@ export function SearchSection() {
                 : "border-transparent text-gray-500 hover:text-gray-700"
             }`}
           >
-            {isEnglish ? "Keyword search" : "Recherche classique"}
+            {isEnglish ? "Classic search" : "Recherche classique"}
           </button>
           <button
             type="button"
@@ -77,12 +85,15 @@ export function SearchSection() {
                 : "border-transparent text-gray-500 hover:text-gray-700"
             }`}
           >
-            {isEnglish ? "AI search" : "Recherche assistée"}
+            {isEnglish ? "Guided search" : "Recherche assistée"}
           </button>
         </div>
 
         {tab === "keyword" ? (
           <div className="mt-8 space-y-5">
+            <h3 className="text-lg font-medium text-gray-900">
+              {isEnglish ? "Search" : "Recherche"}
+            </h3>
             <div className="flex flex-col gap-5 sm:flex-row">
               <div className="relative flex-1">
                 <input
@@ -97,7 +108,7 @@ export function SearchSection() {
                 />
                 {showKeywordSuggestions && (
                   <ul className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-lg border border-gray-200 bg-white py-1 shadow-lg">
-                    {SPECIALTY_SUGGESTIONS.map((suggestion) => (
+                    {(isEnglish ? SPECIALTY_SUGGESTIONS_EN : SPECIALTY_SUGGESTIONS_FR).map((suggestion) => (
                       <li key={suggestion}>
                         <button
                           type="button"
@@ -148,24 +159,29 @@ export function SearchSection() {
             <div className="flex justify-center pt-2">
               <Button onClick={handleKeywordSearch} className="gap-2">
                 <Search className="h-4 w-4" />
-                {isEnglish ? "Search" : "Rechercher"}
+                {isEnglish ? "Find my advisor" : "Trouver mon conseiller"}
               </Button>
             </div>
           </div>
         ) : (
           <div className="mt-8">
+            <h3 className="text-lg font-medium text-gray-900">
+              {isEnglish ? "Need guidance?" : "Vous avez besoin d'être guidé ?"}
+            </h3>
+            <p className="mt-2 text-gray-600">
+              {isEnglish
+                ? "Describe your situation and receive a selection of financial advisors suited to your profile and goals."
+                : "Ecrivez votre demande et recevez une sélection de conseillers financiers adaptés à votre profil et vos objectifs."}
+            </p>
             <textarea
               value={aiInput}
               onChange={(e) => setAiInput(e.target.value)}
               rows={4}
-              placeholder={isEnglish ? 'Describe your situation or what you need... e.g. "I need an investment advisor in Lyon, available soon."' : 'Ex : "Je cherche un conseiller en investissement à Lyon pour préparer ma retraite"'}
-              className="w-full rounded-lg border border-gray-300 px-5 py-4 text-base focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]"
+              placeholder={isEnglish ? 'e.g. "I need an investment advisor in Lyon to help plan for retirement"' : 'Ex : "Je cherche un conseiller en investissement à Lyon pour préparer ma retraite"'}
+              className="mt-4 w-full rounded-lg border border-gray-300 px-5 py-4 text-base focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]"
             />
-            <p className="mt-4 text-sm text-gray-500">
-              {isEnglish ? "Describe your situation, goals, and constraints in your own words." : "Quelques mots suffisent. Notre outil identifie les conseillers adaptés à votre profil."}
-            </p>
             <div className="mt-5 flex justify-center">
-              <Button onClick={handleAiSearch}>{isEnglish ? "Search" : "Rechercher"}</Button>
+              <Button onClick={handleAiSearch}>{isEnglish ? "Search" : "Trouver mon conseiller"}</Button>
             </div>
           </div>
         )}
